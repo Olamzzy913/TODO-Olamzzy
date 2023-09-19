@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="My icons">
+	<title>TODO App</title>
+</head>
+<body>
+     <div class="app">
+     	<h4 id="subtitle" style="margin-top: 0px;">TODO App</h4>
+     	<div id="addNew" onclick="hideShow()">
+     		<span>Add New Task</span>
+     		<i class="fa-solid fa-plus" style="color: #000000; width: 14px; height: 16px;"></i>
+     	</div>
+     	<form class="model fade show" id="form" style="display: none;">
+     			<div class="model-dialog">
+     				<div class="model-content">
+     					<div class="model-header" style="height: 30px; width: 466px;" >
+     						<h5 class="model-title" id="exampleModelLabel">Add New Task</h5>
+     						<i class="fa-solid fa-xmark-large"  id="bClose" onclick="hideShow()"></i>
+     						
+     					</div>
+     					<div class="model-body">
+     						<p style="height: 24px; margin-top: 0px;">Task Title</p>
+     						<input type="text" class="form-control" name id="textInput">
+     						<div id="msg"></div>
+     						<br>
+     						<p style="height: 24px; margin-top: 0px;">Due Date</p>
+     						<input type="date" class="form-control" name id="dateInput">
+     						<br>
+     						<p style="height: 24px; margin-top: 0px;">Description</p>
+     						<textarea name class="form-control" id="textarea" cols="30" rows="5"></textarea>
+     					</div>
+     					<div class="model-footer">
+     						<button type="button" class="btn btn-secondary" data-bs-dismiss="model" onclick="hideShow()">Close</button>
+     						<button type="submit" id="add" class="btn btn-primary">Add</button>
+     					</div>
+     				</div>
+     			</div>
+     		</form>
+     		<h5 class="text-center my-3" style="margin-bottom: 16px;">Tasks</h5>
+     		<div id="tasks"></div>
+     </div>
+  
+<script src="https://kit.fontawesome.com/8c6c03f6c4.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="index.js"></script>
+<div class="model-backdrop fade show"></div>
+</body>
+</html>
